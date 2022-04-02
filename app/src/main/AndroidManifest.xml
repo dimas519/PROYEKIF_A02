@@ -11,7 +11,7 @@
         android:theme="@style/Theme.PROYEK_AIF_02">
         <meta-data
             android:name="com.google.android.actions"
-            android:resource="@xml/custom_checkbox" />
+            android:resource="@xml/rectangle" />
 
         <activity
             android:name=".MainActivity"

@@ -87,7 +87,7 @@ class ProductCartFragments: Fragment(), View.OnClickListener, ICart {
 
     override fun changeTotal(value: String, count: Int) {
         binding.total.text = value
-        binding.checkout.text = "CHECKOUT ($count)"
+        binding.checkout.text = "Purchase ($count)"
         countItemSelected = count
     }
 

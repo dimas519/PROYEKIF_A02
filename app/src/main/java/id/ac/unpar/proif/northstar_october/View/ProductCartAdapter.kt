@@ -64,7 +64,8 @@ class ProductCartAdapter(private val activity: Activity, private var presenter: 
             binding.checkbox.isChecked = currentBox.getIsChecked()
             binding.tvQuantity.text = currentBox.getQuantity().toString()
             binding.tvName.text = currentBox.getProduct().getName()
-            binding.tvDescription.text = currentBox.getProduct().getDescription()
+            binding.tvCategory.text ="Category :"+currentBox.getProduct().getCategory().toString();
+            binding.tvCondition.text ="Condition " + currentBox.getProduct().getCondition().toString()+"%";
             binding.tvPrice.text = currentBox.getProduct().getFormattedPrice()
 
             Glide.with(activity)

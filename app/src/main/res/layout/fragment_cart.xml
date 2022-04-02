@@ -66,12 +66,12 @@
 
         <Button
             android:id="@+id/checkout"
-            android:backgroundTint="#6639A6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:text="CHECKOUT">
+            android:layout_marginEnd="0dp"
+            android:backgroundTint="#6639A6"
+            android:text="Purchase">
 
         </Button>
 
