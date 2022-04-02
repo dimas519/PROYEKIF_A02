@@ -14,6 +14,7 @@
         android:buttonTint="#6639A6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:button="@xml/custom_checkbox"
         android:minWidth="0dp"
         android:minHeight="0dp"
         android:layout_marginRight="10dp"

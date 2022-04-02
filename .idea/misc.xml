@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Kurni/AndroidStudioProjects/fork/PROYEKIF_A02/app/src/main/res/drawable/ic_baseline_radio_button_checked_24.xml" value="0.1475" />
+        <entry key="..\:/Users/Kurni/AndroidStudioProjects/fork/PROYEKIF_A02/app/src/main/res/drawable/ic_baseline_radio_button_unchecked_24.xml" value="0.1475" />
+        <entry key="..\:/Users/Kurni/AndroidStudioProjects/fork/PROYEKIF_A02/app/src/main/res/drawable/rounded_corner_inputfield.xml" value="0.1475" />
+        <entry key="..\:/Users/Kurni/AndroidStudioProjects/fork/PROYEKIF_A02/app/src/main/res/layout/fragment_payment.xml" value="0.23055555555555557" />
+        <entry key="..\:/Users/Kurni/AndroidStudioProjects/fork/PROYEKIF_A02/app/src/main/res/layout/product_cart_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Kurni/AndroidStudioProjects/fork/PROYEKIF_A02/app/src/main/res/layout/product_list_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Kurni/AndroidStudioProjects/fork/PROYEKIF_A02/app/src/main/res/layout/product_payment_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Vanilla/Documents/Kuliah/Semester 6/PIF/PROYEKIF_A02/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.1185" />
         <entry key="..\:/Vanilla/Documents/Kuliah/Semester 6/PIF/PROYEKIF_A02/app/src/main/res/drawable/ic_baseline_apps_24.xml" value="0.1" />
         <entry key="..\:/Vanilla/Documents/Kuliah/Semester 6/PIF/PROYEKIF_A02/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2605" />
