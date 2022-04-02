@@ -44,10 +44,11 @@ class MainActivity : AppCompatActivity() {
 
         // Fragment initiation
         this.fm = this.supportFragmentManager
+        this.productCartFragments = ProductCartFragments.newInstance()
         this.productListFragments = ProductListFragments.newInstance(this.inv)
         this.productTilesFragments = ProductTilesFragments.newInstance(this.inv)
         this.productDetailsFragments = ProductDetailsFragments.newInstance()
-        this.productCartFragments = ProductCartFragments.newInstance()
+
         this.paymentFragment = PaymentFragment.newInstance()
         this.addressFragment = AddressFragment.newInstance()
 

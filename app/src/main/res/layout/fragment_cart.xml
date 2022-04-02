@@ -38,16 +38,28 @@
         android:layout_height="wrap_content"
         android:paddingTop="10dp">
 
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:buttonTint="#6639A6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@xml/custom_checkbox"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+
         <TextView
+            android:layout_toRightOf="@+id/checkbox"
             android:id="@+id/tv_title_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="10dp"
             android:fontFamily="@font/lato"
-            android:textSize="18sp"
+            android:text="TOTAL"
             android:textColor="#6639A6"
-            android:text="TOTAL">
+            android:textSize="18sp">
 
         </TextView>
         <TextView

@@ -1,6 +1,7 @@
 package id.ac.unpar.proif.northstar_october.View
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -22,6 +23,7 @@ class ProductCartFragments: Fragment(), View.OnClickListener, ICart {
     private lateinit var adapter: ProductCartAdapter
     private var pageFrom: Int = Code.PAGE_LIST_MODE
     private var countItemSelected: Int = 0
+    private var checkAll:Boolean=false
 
     companion object {
         // singleton
@@ -34,7 +36,7 @@ class ProductCartFragments: Fragment(), View.OnClickListener, ICart {
         binding = FragmentCartBinding.inflate(inflater, container, false)
 
         // inisiasi
-        presenter = CartPresenter(this)
+        presenter=CartPresenter(this)
         adapter = ProductCartAdapter(requireActivity(), presenter, parentFragmentManager)
 
         // set adapter
@@ -66,6 +68,7 @@ class ProductCartFragments: Fragment(), View.OnClickListener, ICart {
         // set click listener
         binding.ivBack.setOnClickListener(this::onClick)
         binding.checkout.setOnClickListener(this::onClick)
+        binding.checkbox.setOnClickListener(this)
 
         return binding.root
     }
@@ -77,6 +80,8 @@ class ProductCartFragments: Fragment(), View.OnClickListener, ICart {
             }
             binding.checkout -> {
                 moveToPayment()
+            }binding.checkbox->{
+                this.selectUnselectAllItem()
             }
         }
     }
@@ -89,6 +94,12 @@ class ProductCartFragments: Fragment(), View.OnClickListener, ICart {
         binding.total.text = value
         binding.checkout.text = "Purchase ($count)"
         countItemSelected = count
+    }
+
+    override fun checkUncheckAll(numSelected :Int) {
+        this.checkAll=numSelected-1==countItemSelected;
+            this.binding.checkbox.isChecked =this.checkAll
+            this.binding.checkbox.isChecked =this.checkAll
     }
 
     private fun addItemFromDetails (product: Product) {
@@ -119,5 +130,12 @@ class ProductCartFragments: Fragment(), View.OnClickListener, ICart {
         toast.show()
 
     }
+
+
+    private fun selectUnselectAllItem(){
+        this.checkAll=!checkAll
+        this.presenter.checkOrUncheckAllitems(this.checkAll);
+    }
+
 
 }

@@ -6,7 +6,6 @@ import id.ac.unpar.proif.northstar_october.Model.Cart
 import id.ac.unpar.proif.northstar_october.View.ICart
 
 class CartPresenter (private val ui: ICart) {
-
     private var cart: ArrayList<Box> = ArrayList()
 
     fun addProduct (product: Product) {
@@ -21,6 +20,7 @@ class CartPresenter (private val ui: ICart) {
         when (check) {
             false -> cart.add(Box(product))
         }
+        this.ui.checkUncheckAll(cart.size)
         setTotalCost()
         ui.loadCart(cart)
     }
@@ -28,6 +28,9 @@ class CartPresenter (private val ui: ICart) {
     fun toogleCheckBox (box: Box) {
         val idx = cart.indexOf(box)
         cart[idx].toogleChecked()
+
+        this.ui.checkUncheckAll(cart.size)
+        setTotalCost()
     }
 
     fun setTotalCost () {
@@ -65,4 +68,26 @@ class CartPresenter (private val ui: ICart) {
         }
         return cart
     }
+
+    fun checkOrUncheckAllitems(checkAll:Boolean){
+        cart.forEach{
+            if(checkAll){ //kalau mau check semua
+                if(!it.getIsChecked()){
+                    it.toogleChecked()
+                }
+            }else{
+                if(it.getIsChecked()){
+                    it.toogleChecked()
+                }
+            }
+
+        }
+        setTotalCost()
+        ui.loadCart(cart)
+    }
+
+
+
+
+
 }
