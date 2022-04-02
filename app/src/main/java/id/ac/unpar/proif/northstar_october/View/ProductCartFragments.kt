@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import id.ac.unpar.proif.northstar_october.Model.Box
 import id.ac.unpar.proif.northstar_october.Model.Code
 import id.ac.unpar.proif.northstar_october.Model.Inventory
@@ -44,7 +45,7 @@ class ProductCartFragments: Fragment(), View.OnClickListener, ICart {
 
         // result listener
         parentFragmentManager.setFragmentResultListener(
-            Code.REQKEY_ADD_PRODUCT_TO_CART, this
+            Code.REQKEY_ADD_PRODUCT_TO_CART,this
         ) { requestKey, result ->
             val product = Parcels.unwrap<Any>(result.getParcelable("product")) as Product
             addItemFromDetails(product)
@@ -131,11 +132,9 @@ class ProductCartFragments: Fragment(), View.OnClickListener, ICart {
 
     }
 
-
     private fun selectUnselectAllItem(){
         this.checkAll=!checkAll
         this.presenter.checkOrUncheckAllitems(this.checkAll);
     }
-
 
 }

@@ -63,7 +63,10 @@ class MainActivity : AppCompatActivity() {
 
         // Add product-list-fragment to fragment transaction
         val ft = this.fm.beginTransaction()
-        ft.add(R.id.fragment_container, this.productListFragments).addToBackStack(null).commit()
+        ft.add(R.id.fragment_container, this.productListFragments)
+            .add(R.id.fragment_container,this.productCartFragments)
+            .hide(this.productCartFragments)
+            .addToBackStack(null).commit()
         currentFragment = Code.PAGE_LIST_MODE
 
         // changePage listener
